@@ -8,7 +8,7 @@ import { colors } from "../colors";
 const StyledText = styled.Text`
   font-size: 16px;
   color: ${colors.gray};
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-align: left;
 `;
 
