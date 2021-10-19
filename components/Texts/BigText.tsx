@@ -10,6 +10,7 @@ const StyledText = styled.Text`
   font-weight: 700;
   color: ${colors.white};
   margin-vertical: 20px;
+  text-align: left;
 `;
 
 const BigText = (props: { textStyles?: any; children: React.ReactNode }) => {
