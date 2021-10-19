@@ -1,11 +1,14 @@
 import React from "react";
 import { Text } from "react-native";
-
-// components
-import { Container } from "../components/shared";
-import RegularButton from "../components/RegularButton";
 import styled from "styled-components/native";
+
+// custom components
 import { colors } from "../components/colors";
+import { Container } from "../components/shared";
+import RegularButton from "../components/Buttons/RegularButton";
+import BigText from "../components/Texts/BigText";
+
+
 
 const GetStartedContainer = styled(Container)`
   justify-content: flex-end;
@@ -15,7 +18,7 @@ const GetStartedContainer = styled(Container)`
 const GetStarted = () => {
   return (
     <GetStartedContainer>
-      <Text>Get Started</Text>
+      <BigText>Best way to track your money</BigText>
       <RegularButton>Get Started</RegularButton>
     </GetStartedContainer>
   );

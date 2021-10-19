@@ -3,7 +3,7 @@ import { View, TouchableOpacity, Text } from "react-native";
 import styled from "styled-components/native";
 
 //colors
-import { colors } from "./colors";
+import { colors } from "../colors";
 
 const ButtonView = styled.TouchableOpacity`
   align-items: center;
