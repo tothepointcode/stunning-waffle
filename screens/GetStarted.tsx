@@ -7,8 +7,7 @@ import { colors } from "../components/colors";
 import { Container } from "../components/shared";
 import RegularButton from "../components/Buttons/RegularButton";
 import BigText from "../components/Texts/BigText";
-
-
+import SmallText from "../components/Texts/SmallText";
 
 const GetStartedContainer = styled(Container)`
   justify-content: flex-end;
@@ -19,6 +18,9 @@ const GetStarted = () => {
   return (
     <GetStartedContainer>
       <BigText>Best way to track your money</BigText>
+      <SmallText>
+        Best payment method, connects your money to your friends, family.
+      </SmallText>
       <RegularButton>Get Started</RegularButton>
     </GetStartedContainer>
   );
