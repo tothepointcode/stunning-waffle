@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, Image, View } from "react-native";
 import styled from "styled-components/native";
 
 // custom components
@@ -10,21 +10,45 @@ import BigText from "../components/Texts/BigText";
 import SmallText from "../components/Texts/SmallText";
 
 const GetStartedContainer = styled(Container)`
-  justify-content: flex-end;
   background-color: ${colors.secondary};
-  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+`;
+
+export const TopImage = styled.Image`
+  width: 100%;
+  height: 100%;
+  resize-mode: stretch;
+`;
+
+const TopSection = styled.View`
+  width: 100%;
+  flex: 1 1 auto;
+  max-height: 55%;
+`;
+const BottomSection = styled.View`
+  width: 100%;
+  padding: 25px;
+  flex: 1 1 auto;
+  justify-content: flex-end;
 `;
 
 const GetStarted = () => {
   return (
     <GetStartedContainer>
-      <BigText textStyles={{ width: "70%" }}>
-        Best way to track your money
-      </BigText>
-      <SmallText textStyles={{ width: "70%" }}>
-        Best payment method, connects your money to your friends, family.
-      </SmallText>
-      <RegularButton>Get Started</RegularButton>
+      <TopSection>
+        <TopImage source={require("./../assets/bgs/background_v1.png")} />
+      </TopSection>
+      <BottomSection>
+        <BigText textStyles={{ width: "70%" }}>
+          Best way to track your money
+        </BigText>
+        <SmallText textStyles={{ width: "70%" }}>
+          Best payment method, connects your money to your friends, family.
+        </SmallText>
+        <RegularButton>Get Started</RegularButton>
+      </BottomSection>
     </GetStartedContainer>
   );
 };
