@@ -4,7 +4,7 @@ import styled from "styled-components/native";
 
 // custom components
 import { colors } from "../colors";
-import BigText from "../Texts/BigText";
+import RegularText from "../Texts/RegularText";
 import SmallText from "../Texts/SmallText";
 
 const StyledView = styled.View`
@@ -13,20 +13,12 @@ const StyledView = styled.View`
   flex: 1 1 auto;
 `;
 
-const MainText = styled(BigText)`
-  font-size: 50px;
-  font-weight: 700;
-  color: ${colors.white};
-  margin-bottom: 25px;
-  text-align: left;
+const MainText = styled(RegularText)`
+  color: ${colors.secondary};
 `;
 
 const SubText = styled(SmallText)`
-  font-size: 50px;
-  font-weight: 700;
-  color: ${colors.white};
-  margin-bottom: 25px;
-  text-align: left;
+  color: ${colors.secondary};
 `;
 
 interface GreetingsProps {
@@ -39,8 +31,10 @@ interface GreetingsProps {
 const Greetings = (props: GreetingsProps) => {
   return (
     <StyledView>
-      <MainText style={{ ...props.mainTextStyles }}>{props.mainText}</MainText>
-      <SubText style={{ ...props.subTextStyles }}>{props.subText}</SubText>
+      <MainText textStyles={{ ...props.mainTextStyles }}>
+        {props.mainText}
+      </MainText>
+      <SubText textStyles={{ ...props.subTextStyles }}>{props.subText}</SubText>
     </StyledView>
   );
 };
