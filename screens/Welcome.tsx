@@ -11,7 +11,7 @@ import SmallText from "../components/Texts/SmallText";
 import Greetings from "../components/Headers/Greetings";
 
 const WelcomeContainer = styled(Container)`
-  background-color: ${colors.gray};
+  background-color: ${colors.graylight};
   width: 100%;
   height: 100%;
 `;

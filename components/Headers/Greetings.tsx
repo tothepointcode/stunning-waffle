@@ -35,7 +35,7 @@ const Greetings = (props: GreetingsProps) => {
       </RegularText>
       <SmallText
         textStyles={{
-          color: colors.secondary,
+          color: colors.graydark,
           ...props.subTextStyles,
         }}
       >

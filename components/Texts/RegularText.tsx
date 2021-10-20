@@ -9,7 +9,6 @@ const StyledText = styled.Text`
   font-size: 20px;
   font-weight: 400;
   color: ${colors.white};
-  margin-bottom: 20px;
   text-align: left;
 `;
 
