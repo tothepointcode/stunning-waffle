@@ -52,7 +52,7 @@ const CardSection = (props: { data?: object[] }) => {
           source={require("./../../assets/bgs/background_transparent.png")}
         >
           <CardTouchable
-            underlayColor={colors.graydark}
+            underlayColor={colors.secondary}
             onPress={() => alert("Pressed!")}
           >
             <TouchableView>

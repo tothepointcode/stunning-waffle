@@ -7,7 +7,7 @@ import { colors } from "../colors";
 
 const StyledText = styled.Text`
   font-size: 20px;
-  font-weight: 400;
+  font-weight: bold;
   color: ${colors.white};
   text-align: left;
 `;
