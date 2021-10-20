@@ -9,8 +9,8 @@ const ButtonView = styled.TouchableOpacity`
   align-items: center;
   background-color: ${colors.primary};
   width: 100%;
-  padding: 15px;
-  border-radius: 15px;
+  padding: 20px;
+  border-radius: 20px;
 `;
 
 const ButtonText = styled.Text`
