@@ -12,6 +12,7 @@ import Greetings from "../components/Headers/Greetings";
 import Profile from "../components/Headers/Profile";
 import CardSection from "../components/Cards/CardSection";
 import Avi from "./../assets/avi/avatar.png";
+import TransactionSection from "../components/Transactions/TransactionSection";
 
 const WelcomeContainer = styled(Container)`
   background-color: ${colors.graylight};
@@ -24,6 +25,7 @@ const Welcome = () => {
     <WelcomeContainer>
       <Greetings mainText="Hey Coby!" subText="Welcome back" />
       <CardSection />
+      <TransactionSection />
       <Profile img={Avi} />
     </WelcomeContainer>
   );

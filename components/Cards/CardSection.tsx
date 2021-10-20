@@ -2,14 +2,12 @@ import React from "react";
 import styled from "styled-components/native";
 
 // components
-import { colors } from "../colors";
 import CardItem from "./CardItem";
 import logo1 from "./../../assets/cards/visa_white.png";
 
 const CardsList = styled.FlatList`
   width: 100%;
   padding-left: 25px;
-  flex: 1;
 `;
 
 const CardSection = (props: { data?: object[] }) => {
