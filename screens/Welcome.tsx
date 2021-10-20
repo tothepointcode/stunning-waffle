@@ -8,6 +8,7 @@ import { Container } from "../components/shared";
 import RegularButton from "../components/Buttons/RegularButton";
 import BigText from "../components/Texts/BigText";
 import SmallText from "../components/Texts/SmallText";
+import Greetings from "../components/Headers/Greetings";
 
 const WelcomeContainer = styled(Container)`
   background-color: ${colors.gray};
@@ -16,9 +17,11 @@ const WelcomeContainer = styled(Container)`
 `;
 
 const Welcome = () => {
-  return (<WelcomeContainer>
-    
-  </WelcomeContainer>);
+  return (
+    <WelcomeContainer>
+      <Greetings mainText="Hey Coby!" subText="Welcome back" />
+    </WelcomeContainer>
+  );
 };
 
 export default Welcome;

@@ -13,14 +13,6 @@ const StyledView = styled.View`
   flex: 1 1 auto;
 `;
 
-const MainText = styled(RegularText)`
-  color: ${colors.secondary};
-`;
-
-const SubText = styled(SmallText)`
-  color: ${colors.secondary};
-`;
-
 interface GreetingsProps {
   mainTextStyles?: any;
   mainText: string;
@@ -31,10 +23,24 @@ interface GreetingsProps {
 const Greetings = (props: GreetingsProps) => {
   return (
     <StyledView>
-      <MainText textStyles={{ ...props.mainTextStyles }}>
+      <RegularText
+        textStyles={{
+          color: colors.secondary,
+          fontSize: 30,
+          fontWeight: "bold",
+          ...props.mainTextStyles,
+        }}
+      >
         {props.mainText}
-      </MainText>
-      <SubText textStyles={{ ...props.subTextStyles }}>{props.subText}</SubText>
+      </RegularText>
+      <SmallText
+        textStyles={{
+          color: colors.secondary,
+          ...props.subTextStyles,
+        }}
+      >
+        {props.subText}
+      </SmallText>
     </StyledView>
   );
 };
