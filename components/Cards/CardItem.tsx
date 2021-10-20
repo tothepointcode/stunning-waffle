@@ -59,7 +59,7 @@ const CardItem = (props: CardItemProps) => {
       >
         <TouchableView>
           <CardRow>
-            <RegularText>{props.accountNo}</RegularText>
+            <RegularText>****** {props.accountNo.slice(6, 10)}</RegularText>
           </CardRow>
           <CardRow>
             <View>

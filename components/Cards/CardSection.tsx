@@ -16,9 +16,9 @@ const CardSection = (props: { data?: object[] }) => {
   return (
     <CardsList
       data={[
-        { account: "384575774483", balance: 20000.5, logo: logo1 },
-        { account: "384573774483", balance: 20000.5, logo: logo1 },
-        { account: "384525774483", balance: 20000.5, logo: logo1 },
+        { account: "3845757744", balance: 20000.5, logo: logo1 },
+        { account: "3845737744", balance: 20000.5, logo: logo1 },
+        { account: "3845257744", balance: 20000.5, logo: logo1 },
       ]}
       contentContainerStyle={{
         paddingRight: 25,
