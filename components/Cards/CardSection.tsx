@@ -45,6 +45,9 @@ const CardSection = (props: { data?: object[] }) => {
         { account: "384573774483" },
         { account: "384525774483" },
       ]}
+      contentContainerStyle={{
+        paddingRight: 25,
+      }}
       horizontal={true}
       keyExtractor={(item: any) => item.account}
       renderItem={() => (
