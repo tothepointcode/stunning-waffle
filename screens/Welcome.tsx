@@ -16,7 +16,9 @@ const WelcomeContainer = styled(Container)`
 `;
 
 const Welcome = () => {
-  return <WelcomeContainer></WelcomeContainer>;
+  return (<WelcomeContainer>
+    
+  </WelcomeContainer>);
 };
 
 export default Welcome;
