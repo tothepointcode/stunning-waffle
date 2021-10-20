@@ -27,7 +27,7 @@ const TouchableView = styled.View`
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
-  padding: 25px;
+  padding: 30px;
 `;
 
 const CardRow = styled.View`

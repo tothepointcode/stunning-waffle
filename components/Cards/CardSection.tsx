@@ -7,7 +7,6 @@ import CardItem from "./CardItem";
 import logo1 from "./../../assets/cards/visa_white.png";
 
 const CardsList = styled.FlatList`
-  background-color: ${colors.primary};
   width: 100%;
   padding-left: 25px;
   flex: 1;
@@ -24,6 +23,7 @@ const CardSection = (props: { data?: object[] }) => {
       contentContainerStyle={{
         paddingRight: 25,
       }}
+      showsHorizontalScrollIndicator={false}
       horizontal={true}
       keyExtractor={(item: any) => item.account}
       renderItem={({ item }: any) => (
