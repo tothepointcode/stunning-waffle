@@ -38,7 +38,7 @@ const CardRow = styled.View`
 
 const Logo = styled.Image`
   width: 80px;
-  height: 25px;
+  height: 35px;
   resize-mode: contain;
 `;
 
