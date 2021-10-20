@@ -37,9 +37,9 @@ const CardRow = styled.View`
 `;
 
 const Logo = styled.Image`
-  width: 55px;
-  height: auto;
-  resize-mode: cover;
+  width: 80px;
+  height: 25px;
+  resize-mode: contain;
 `;
 
 interface CardItemProps {
@@ -66,7 +66,9 @@ const CardItem = (props: CardItemProps) => {
               <SmallText textStyles={{ marginBottom: 5, color: colors.white }}>
                 Total balance
               </SmallText>
-              <RegularText>${props.balance}</RegularText>
+              <RegularText textStyles={{ fontSize: 25 }}>
+                ${props.balance}
+              </RegularText>
             </View>
             <Logo source={props.logo} />
           </CardRow>
