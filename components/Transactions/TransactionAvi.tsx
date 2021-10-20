@@ -17,10 +17,10 @@ const StyledView = styled.View`
   align-items: center;
 `;
 
-const TransactionAvi = (props: { icon: string; background: any }) => {
+const TransactionAvi = (props: { icon: any; background: any }) => {
   return (
     <StyledView style={{ backgroundColor: props.background }}>
-      <Ionicons name="car" size={35} color={colors.white} />
+      <Ionicons name={props.icon} size={35} color={colors.white} />
     </StyledView>
   );
 };
