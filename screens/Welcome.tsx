@@ -10,6 +10,7 @@ import BigText from "../components/Texts/BigText";
 import SmallText from "../components/Texts/SmallText";
 import Greetings from "../components/Headers/Greetings";
 import Profile from "../components/Headers/Profile";
+import CardSection from "../components/Cards/CardSection";
 import Avi from "./../assets/avi/avatar.png";
 
 const WelcomeContainer = styled(Container)`
@@ -22,6 +23,7 @@ const Welcome = () => {
   return (
     <WelcomeContainer>
       <Greetings mainText="Hey Coby!" subText="Welcome back" />
+      <CardSection />
       <Profile img={Avi} />
     </WelcomeContainer>
   );
