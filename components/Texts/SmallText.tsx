@@ -6,7 +6,7 @@ import styled from "styled-components/native";
 import { colors } from "../colors";
 
 const StyledText = styled.Text`
-  font-size: 16px;
+  font-size: 17px;
   color: ${colors.gray};
   text-align: left;
 `;
