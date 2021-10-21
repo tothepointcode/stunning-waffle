@@ -21,9 +21,9 @@ const StyledImage = styled.Image`
   border-radius: 25px;
 `;
 
-const Profile = (props: { img: any }) => {
+const Profile = (props: { img: any; imgStyle?: any }) => {
   return (
-    <StyledView>
+    <StyledView style={{ ...props.imgStyle }}>
       <StyledImage source={props.img} />
     </StyledView>
   );

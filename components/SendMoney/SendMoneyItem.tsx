@@ -7,6 +7,7 @@ import { colors } from "../colors";
 import RegularText from "../Texts/RegularText";
 import SmallText from "../Texts/SmallText";
 import TransactionAvi from "../Transactions/TransactionAvi";
+import Profile from "../Headers/Profile";
 
 const TransactionRow = styled.View`
   flex-direction: row;
@@ -24,7 +25,12 @@ const LeftView = styled.View`
 `;
 
 const SendMoneyContainer = styled.View`
-    height: 100px;
+  height: 160px;
+  width: 150px;
+  padding: 15px;
+  border-radius: 25px;
+  flex: 1;
+  justify-content: space-around;
 `;
 
 const RightView = styled.View``;
@@ -38,21 +44,23 @@ interface SendMoneyProps {
 
 const TransactionItem = (props: SendMoneyProps) => {
   return (
-    <SendMoneyContainer style={{backgroundColor: props.background}}>
+    <SendMoneyContainer style={{ backgroundColor: props.background }}>
+      <Profile
+        img={props.img}
+        imgStyle={{ width: 60, height: 60, marginBottom: 10 }}
+      />
 
-      
       <SmallText
         textStyles={{
           textAlign: "left",
-          color: colors.graydark,
+          color: colors.white,
         }}
       >
         {props.name}
       </SmallText>
       <RegularText
         textStyles={{
-          fontSize: 25,
-          color: colors.secondary,
+          color: colors.white,
           textAlign: "left",
         }}
       >

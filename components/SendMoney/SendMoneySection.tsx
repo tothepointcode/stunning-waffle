@@ -6,7 +6,9 @@ import { colors } from "../colors";
 import RegularText from "../Texts/RegularText";
 import SmallText from "../Texts/SmallText";
 import SendMoneyItem from "./SendMoneyItem";
-import Avi from "./../../assets/avi/avatar.png";
+import Portrait1 from "./../../assets/portraits/1.jpg";
+import Portrait2 from "./../../assets/portraits/2.jpg";
+import Portrait3 from "./../../assets/portraits/3.jpg";
 
 const TransactionSectionBackground = styled.View`
   display: flex;
@@ -47,7 +49,7 @@ const SendMoneySection = () => {
             amount: "2450.56",
             name: "Harleen Scot",
             background: colors.tertiary,
-            img: Avi,
+            img: Portrait1,
           },
         ]}
         contentContainerStyle={{
