@@ -28,7 +28,10 @@ const Welcome = () => {
       <CardSection />
       <TransactionSection />
       <SendMoneySection />
-      <Profile img={Avi} />
+      <Profile
+        img={Avi}
+        imgContainerStyle={{ backgroundColor: colors.tertiary }}
+      />
     </WelcomeContainer>
   );
 };

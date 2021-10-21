@@ -1,39 +1,21 @@
 import React from "react";
-import { View, Image } from "react-native";
 import styled from "styled-components/native";
 
 //colors
 import { colors } from "../colors";
 import RegularText from "../Texts/RegularText";
 import SmallText from "../Texts/SmallText";
-import TransactionAvi from "../Transactions/TransactionAvi";
 import Profile from "../Headers/Profile";
 
-const TransactionRow = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 25px;
-`;
-
-const LeftView = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
-  height: 100%;
-  align-items: center;
-`;
-
-const SendMoneyContainer = styled.View`
-  height: 160px;
-  width: 150px;
-  padding: 15px;
+const SendMoneyContainer = styled.TouchableHighlight`
+  height: 150px;
+  width: 135px;
+  padding: 15px 5px 15px 15px;
   border-radius: 25px;
   flex: 1;
   justify-content: space-around;
+  margin-right: 15px;
 `;
-
-const RightView = styled.View``;
 
 interface SendMoneyProps {
   img: any;
@@ -44,28 +26,37 @@ interface SendMoneyProps {
 
 const TransactionItem = (props: SendMoneyProps) => {
   return (
-    <SendMoneyContainer style={{ backgroundColor: props.background }}>
-      <Profile
-        img={props.img}
-        imgStyle={{ width: 60, height: 60, marginBottom: 10 }}
-      />
+    <SendMoneyContainer
+      underlayColor={colors.secondary}
+      style={{ backgroundColor: props.background }}
+      onPress={() => {
+        alert("Send Money!");
+      }}
+    >
+      <>
+        <Profile
+          img={props.img}
+          imgContainerStyle={{ width: 60, height: 60, marginBottom: 10 }}
+        />
 
-      <SmallText
-        textStyles={{
-          textAlign: "left",
-          color: colors.white,
-        }}
-      >
-        {props.name}
-      </SmallText>
-      <RegularText
-        textStyles={{
-          color: colors.white,
-          textAlign: "left",
-        }}
-      >
-        {props.amount}
-      </RegularText>
+        <SmallText
+          textStyles={{
+            textAlign: "left",
+            color: colors.white,
+            fontSize: 15,
+          }}
+        >
+          {props.name}
+        </SmallText>
+        <RegularText
+          textStyles={{
+            color: colors.white,
+            textAlign: "left",
+          }}
+        >
+          {props.amount}
+        </RegularText>
+      </>
     </SendMoneyContainer>
   );
 };

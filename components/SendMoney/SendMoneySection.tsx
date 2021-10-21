@@ -31,6 +31,8 @@ const TransactionList = styled.FlatList`
   height: 265px;
 `;
 
+const TextButton = styled.TouchableOpacity``;
+
 const SendMoneySection = () => {
   return (
     <TransactionSectionBackground>
@@ -38,18 +40,37 @@ const SendMoneySection = () => {
         <RegularText textStyles={{ fontSize: 25, color: colors.secondary }}>
           Send money to
         </RegularText>
-        <SmallText textStyles={{ fontWeight: "bold", color: colors.accent }}>
-          +Add
-        </SmallText>
+        <TextButton onPress={() => alert("Add")}>
+          <SmallText
+            textStyles={{ fontWeight: "bold", color: colors.tertiary }}
+          >
+            +Add
+          </SmallText>
+        </TextButton>
       </TransactionRow>
 
       <TransactionList
         data={[
           {
+            id: 1,
             amount: "2450.56",
-            name: "Harleen Scot",
+            name: "Coby Andoh",
             background: colors.tertiary,
             img: Portrait1,
+          },
+          {
+            id: 2,
+            amount: "4450.56",
+            name: "Harleen Scot",
+            background: colors.primary,
+            img: Portrait2,
+          },
+          {
+            id: 3,
+            amount: "6250.56",
+            name: "James Corbyn",
+            background: colors.accent,
+            img: Portrait3,
           },
         ]}
         contentContainerStyle={{
@@ -57,7 +78,7 @@ const SendMoneySection = () => {
         }}
         showsHorizontalScrollIndicator={false}
         horizontal={true}
-        keyExtractor={(item: any) => item.name + Date.now()}
+        keyExtractor={(item: any) => item.id}
         renderItem={({ item }: any) => (
           <SendMoneyItem
             amount={item.amount}
