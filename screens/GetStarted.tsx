@@ -44,7 +44,7 @@ const GetStarted = () => {
         <BigText textStyles={{ width: "70%" }}>
           Best way to track your money
         </BigText>
-        <SmallText textStyles={{ width: "70%" }}>
+        <SmallText textStyles={{ width: "70%", marginBottom: 25 }}>
           Best payment method, connects your money to your friends, family.
         </SmallText>
         <RegularButton>Get Started</RegularButton>
