@@ -26,7 +26,7 @@ const BalanceContainer = styled(Container)`
 const Balance = () => {
   return (
     <BalanceContainer>
-      <BalanceDial />
+      <BalanceDial balance={20000}/>
     </BalanceContainer>
   );
 };

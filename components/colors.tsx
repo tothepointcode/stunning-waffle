@@ -7,4 +7,7 @@ export const colors = {
   gray: "#D1D5DB",
   graylight: "#F3F4F6",
   graydark: "#4B5563",
+  primaryLight: "rgba(239, 131, 93, 1)",
+  tertiaryLight: "rgba(133, 198, 216, 0.2)",
+  accentLight: "rgba(251, 205, 119, 0.3)"
 };
