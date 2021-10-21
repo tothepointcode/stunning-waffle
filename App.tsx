@@ -10,7 +10,7 @@ export default function App() {
   return (
     <>
       <StatusBar style="auto" />
-      <GetStarted />
+      <Balance />
     </>
   );
 }

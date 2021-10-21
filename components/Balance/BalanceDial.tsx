@@ -9,12 +9,13 @@ import SmallText from "../Texts/SmallText";
 
 const BalanceView = styled.View`
   align-items: center;
-  background-color: ${colors.primary};
-  width: 100px;
-  height: 100px;
+  background-color: ${colors.white};
+  width: 170px;
+  height: 170px;
   padding: 20px;
-  border-radius: 50px;
-  border: 4px solid blue;
+  border-radius: 100px;
+  border: 4px solid ${colors.secondary};
+  justify-content: center;
 `;
 
 const ButtonText = styled.Text`
@@ -24,14 +25,15 @@ const ButtonText = styled.Text`
   letter-spacing: 0.5px;
 `;
 
-const RegularButton = (props: {
-  btnStyles?: any;
-  textStyles?: any;
-}) => {
+const RegularButton = (props: { btnStyles?: any; textStyles?: any }) => {
   return (
     <BalanceView style={{ ...props.btnStyles }}>
-        <SmallText>Total Balance</SmallText>
-        <RegularText>$20,000</RegularText>
+      <SmallText textStyles={{ color: colors.secondary }}>
+        Total Balance
+      </SmallText>
+      <RegularText textStyles={{ color: colors.secondary, fontSize: 28 }}>
+        $20,000
+      </RegularText>
     </BalanceView>
   );
 };
