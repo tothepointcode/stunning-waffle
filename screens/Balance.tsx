@@ -16,6 +16,7 @@ import TransactionSection from "../components/Transactions/TransactionSection";
 import SendMoneySection from "../components/SendMoney/SendMoneySection";
 import BalanceDial from "../components/Balance/BalanceDial";
 import Filter from "../components/Balance/Filter";
+import BalanceChart from "../components/Balance/BalanceChart";
 
 const BalanceContainer = styled(Container)`
   background-color: ${colors.graylight};
@@ -30,6 +31,7 @@ const Balance = () => {
     <BalanceContainer>
       <BalanceDial balance={20000} />
       <Filter activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
+      <BalanceChart />
     </BalanceContainer>
   );
 };

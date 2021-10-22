@@ -4,6 +4,7 @@ export const colors = {
   tertiary: "#85c6d8",
   accent: "#fbcd77",
   white: "#fff",
+  grayExtra: "#9CA3AF",
   gray: "#D1D5DB",
   graylight: "#F3F4F6",
   graydark: "#4B5563",
