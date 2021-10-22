@@ -1,26 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components/native";
-import {
-  LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart,
-} from "react-native-chart-kit";
-import {
-  Circle,
-  G,
-  Path,
-  Polygon,
-  Polyline,
-  Rect,
-  Svg,
-} from "react-native-svg";
+import { LineChart } from "react-native-chart-kit";
+import { Circle } from "react-native-svg";
 
-//colors
+// custom components
 import { colors } from "../colors";
-import RegularText from "../Texts/RegularText";
 import SmallText from "../Texts/SmallText";
 
 const BalanceView = styled.View`
@@ -29,13 +13,6 @@ const BalanceView = styled.View`
   justify-content: center;
   margin-top: 10px;
   width: 100%;
-`;
-
-const Dot = styled.View`
-  height: 15px;
-  width: 15px;
-  background-color: red;
-  border-radius: 500px;
 `;
 
 const SmallBox = styled.View`
@@ -71,8 +48,8 @@ const data = {
   datasets: [
     {
       data: [3500, 2400, 4900, 6482, 4700, 2800, 3900],
-      color: (opacity = 1) => colors.tertiary, // optional
-      strokeWidth: 4, // optional
+      color: () => colors.tertiary,
+      strokeWidth: 4,
     },
   ],
 };
@@ -98,9 +75,23 @@ const BalanceChart = () => {
         }}
         renderDotContent={({ x, y, index, indexData }) => {
           if (index === currentDot) {
+            const length = data.datasets[0].data.length;
+            let left;
+
+            switch (index) {
+              case 0:
+                left = x - 5;
+                break;
+              case length - 1:
+                left = x - 70;
+                break;
+              default:
+                left = x - 40;
+            }
+
             return (
               <>
-                <SmallBox style={{ left: x - 40, top: y - 55 }}>
+                <SmallBox style={{ left: left, top: y - 55 }}>
                   <SmallText
                     textStyles={{ color: colors.white, fontWeight: "bold" }}
                   >
