@@ -1,10 +1,8 @@
 import React from "react";
 import styled from "styled-components/native";
-import { AnimatedCircularProgress } from "react-native-circular-progress";
 
 //colors
 import { colors } from "../colors";
-import RegularText from "../Texts/RegularText";
 import SmallText from "../Texts/SmallText";
 
 const FilterView = styled.View`
@@ -18,26 +16,23 @@ const FilterView = styled.View`
 const TextButton = styled.TouchableOpacity``;
 
 const Filter = (props: {
-  setActiveFilter: React.Dispatch<React.SetStateAction<string>>;
-  activeFilter: string;
+  setActiveFilter: React.Dispatch<React.SetStateAction<number>>;
+  activeFilter: number;
 }) => {
   const data = [
-    { category: "Day" },
-    { category: "Week" },
-    { category: "Month" },
-    { category: "Year" },
+    { id: 0, category: "Day" },
+    { id: 1, category: "Week" },
+    { id: 2, category: "Month" },
+    { id: 3, category: "Year" },
   ];
   return (
     <FilterView>
       {data.map((item, index) => (
-        <TextButton
-          key={index}
-          onPress={() => props.setActiveFilter(item.category)}
-        >
+        <TextButton key={index} onPress={() => props.setActiveFilter(item.id)}>
           <SmallText
             textStyles={{
               color:
-                props.activeFilter !== item.category
+                props.activeFilter !== item.id
                   ? colors.graydark
                   : colors.primary,
             }}

@@ -34,10 +34,6 @@ const chartConfig = {
   fillShadowGradientOpacity: 0.4,
   color: (opacity = 1) => `rgba(156, 163, 175, ${opacity})`,
   useShadowColorFromDataset: false,
-  style: {
-    marginRight: 39,
-    borderRadius: 26,
-  },
 };
 
 import { Dimensions, View } from "react-native";
