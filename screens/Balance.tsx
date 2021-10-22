@@ -25,13 +25,25 @@ const BalanceContainer = styled(Container)`
   padding-top: 25px;
 `;
 
+// chart data
+const data = {
+  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+  datasets: [
+    {
+      data: [3500, 2400, 4900, 6482, 4700, 2800, 3900],
+      color: () => colors.tertiary,
+      strokeWidth: 4,
+    },
+  ],
+};
+
 const Balance = () => {
   const [activeFilter, setActiveFilter] = useState("Month");
   return (
     <BalanceContainer>
       <BalanceDial balance={20000} />
       <Filter activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
-      <BalanceChart />
+      <BalanceChart data={data} />
     </BalanceContainer>
   );
 };

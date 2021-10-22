@@ -40,27 +40,17 @@ const chartConfig = {
   },
 };
 
-import { Dimensions } from "react-native";
+import { Dimensions, View } from "react-native";
+import { LineChartData } from "react-native-chart-kit/dist/line-chart/LineChart";
 const screenWidth = Dimensions.get("window").width;
 
-const data = {
-  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-  datasets: [
-    {
-      data: [3500, 2400, 4900, 6482, 4700, 2800, 3900],
-      color: () => colors.tertiary,
-      strokeWidth: 4,
-    },
-  ],
-};
-
-const BalanceChart = () => {
+const BalanceChart = (props: { data: LineChartData }) => {
   const [currentDot, setCurrentDot] = useState(3);
 
   return (
     <BalanceView>
       <LineChart
-        data={data}
+        data={props.data}
         width={screenWidth + screenWidth * 0.2}
         height={350}
         verticalLabelRotation={0}
@@ -75,7 +65,7 @@ const BalanceChart = () => {
         }}
         renderDotContent={({ x, y, index, indexData }) => {
           if (index === currentDot) {
-            const length = data.datasets[0].data.length;
+            const length = props.data.datasets[0].data.length;
             let left;
 
             switch (index) {
@@ -90,7 +80,7 @@ const BalanceChart = () => {
             }
 
             return (
-              <>
+              <View key={Math.random()}>
                 <SmallBox style={{ left: left, top: y - 55 }}>
                   <SmallText
                     textStyles={{ color: colors.white, fontWeight: "bold" }}
@@ -99,7 +89,6 @@ const BalanceChart = () => {
                   </SmallText>
                 </SmallBox>
                 <Circle
-                  key={Math.random()}
                   cx={x}
                   cy={y}
                   r="13"
@@ -108,7 +97,7 @@ const BalanceChart = () => {
                   stroke="#fff"
                   strokeWidth={5}
                 />
-              </>
+              </View>
             );
           } else {
             return (
