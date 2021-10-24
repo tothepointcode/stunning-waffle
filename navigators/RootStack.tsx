@@ -28,10 +28,22 @@ export default function App() {
             backgroundColor: colors.graylight,
             borderBottomWidth: 0,
             shadowColor: "transparent",
+            shadowOpacity: 0,
+            elevation: 0,
+            height: 120,
           },
           headerTintColor: colors.secondary,
           headerTitleStyle: {
             fontWeight: "bold",
+          },
+          headerRightContainerStyle: {
+            paddingRight: 25,
+          },
+          headerLeftContainerStyle: {
+            paddingLeft: 10,
+          },
+          headerTitleContainerStyle: {
+            marginTop: 15,
           },
           headerRight: () => (
             <Profile

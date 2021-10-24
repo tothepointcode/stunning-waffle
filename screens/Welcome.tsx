@@ -24,14 +24,9 @@ const WelcomeContainer = styled(Container)`
 const Welcome = () => {
   return (
     <WelcomeContainer>
-      <Greetings mainText="Hey Coby!" subText="Welcome back" />
       <CardSection />
       <TransactionSection />
       <SendMoneySection />
-      <Profile
-        img={Avi}
-        imgContainerStyle={{ backgroundColor: colors.tertiary }}
-      />
     </WelcomeContainer>
   );
 };

@@ -4,10 +4,9 @@ import styled from "styled-components/native";
 const StyledView = styled.View`
   display: flex;
   flex-direction: column;
-  height: 65px;
-  width: 65px;
+  height: 55px;
+  width: 55px;
   border-radius: 15px;
-  margin-bottom: 35px;
 `;
 
 const StyledImage = styled.Image`
