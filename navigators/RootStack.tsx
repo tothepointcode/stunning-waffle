@@ -14,6 +14,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import Profile from "../components/Headers/Profile";
+import Greetings from "../components/Headers/Greetings";
 import Avi from "./../assets/avi/avatar.png";
 
 const Stack = createStackNavigator();
@@ -40,7 +41,19 @@ export default function App() {
           ),
         }}
       >
-        <Stack.Screen name="Welcome" component={Welcome} options={{}} />
+        <Stack.Screen
+          name="Welcome"
+          component={Welcome}
+          options={{
+            headerTitle: (props) => (
+              <Greetings
+                mainText="Hey Coby!"
+                subText="Welcome back"
+                {...props}
+              />
+            ),
+          }}
+        />
         <Stack.Screen
           name="GetStarted"
           component={GetStarted}
