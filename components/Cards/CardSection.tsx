@@ -9,7 +9,7 @@ const CardsList = styled.FlatList`
   width: 100%;
   padding-left: 25px;
   flex: 1;
-  paddingbottom: 15px;
+  padding-bottom: 15px;
 `;
 
 const CardSection = (props: { data?: object[] }) => {
