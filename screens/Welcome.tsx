@@ -7,7 +7,7 @@ import { colors } from "../components/colors";
 import { Container } from "../components/shared";
 import CardSection from "../components/Cards/CardSection";
 import TransactionSection from "../components/Transactions/TransactionSection";
-import SendMoneySection from "../components/SendMoney/SendMoneySection";
+import MoneyBottomSheet from "../components/SendMoney/MoneyBottomSheet";
 
 const WelcomeContainer = styled(Container)`
   background-color: ${colors.graylight};
@@ -20,7 +20,7 @@ const Welcome = () => {
     <WelcomeContainer>
       <CardSection />
       <TransactionSection />
-      {/* <SendMoneySection /> */}
+      <MoneyBottomSheet />
     </WelcomeContainer>
   );
 };

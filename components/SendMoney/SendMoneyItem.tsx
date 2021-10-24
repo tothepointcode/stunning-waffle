@@ -6,15 +6,15 @@ import { colors } from "../colors";
 import RegularText from "../Texts/RegularText";
 import SmallText from "../Texts/SmallText";
 import Profile from "../Headers/Profile";
+import { ScreenWidth } from "../shared";
 
 const SendMoneyContainer = styled.TouchableHighlight`
   height: 150px;
-  width: 135px;
-  padding: 15px 5px 15px 15px;
+  width: ${ScreenWidth * 0.273}px;
+  padding: 10px;
   border-radius: 25px;
-  flex: 1;
   justify-content: space-around;
-  margin-right: 15px;
+  margin: 0px 15px 15px 0px;
 `;
 
 interface SendMoneyProps {
