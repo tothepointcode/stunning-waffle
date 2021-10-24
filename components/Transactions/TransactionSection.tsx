@@ -40,6 +40,7 @@ const TransactionSection = () => {
       <TransactionList
         data={[
           {
+            id: 1,
             amount: "-$86.00",
             date: "14 Sep 2021",
             title: "Taxi",
@@ -50,6 +51,7 @@ const TransactionSection = () => {
             },
           },
           {
+            id: 2,
             amount: "-$286.00",
             date: "14 Sep 2021",
             title: "Shopping",
@@ -60,6 +62,7 @@ const TransactionSection = () => {
             },
           },
           {
+            id: 3,
             amount: "-$586.00",
             date: "14 Aug 2021",
             title: "Travel",
@@ -74,7 +77,7 @@ const TransactionSection = () => {
           paddingBottom: 25,
         }}
         showsVerticalScrollIndicator={false}
-        keyExtractor={(item: any) => item.date + item.amount}
+        keyExtractor={(item: any) => item.id}
         renderItem={({ item }: any) => (
           <TransactionItem
             amount={item.amount}
