@@ -11,12 +11,12 @@ import Portrait2 from "./../../assets/portraits/2.jpg";
 import Portrait3 from "./../../assets/portraits/3.jpg";
 
 const TransactionSectionBackground = styled.View`
-  display: flex;
   width: 100%;
   padding: 25px;
   background-color: ${colors.white};
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
+  flex: 1;
 `;
 
 const TransactionRow = styled.View`

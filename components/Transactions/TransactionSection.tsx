@@ -8,9 +8,10 @@ import SmallText from "../Texts/SmallText";
 import TransactionItem from "./TransactionItem";
 
 const TransactionSectionBackground = styled.View`
-  display: flex;
   width: 100%;
-  padding: 25px;
+  padding-horizontal: 25px;
+  padding-top: 5px;
+  flex: 2;
 `;
 
 const TransactionRow = styled.View`
@@ -22,7 +23,6 @@ const TransactionRow = styled.View`
 
 const TransactionList = styled.FlatList`
   width: 100%;
-  height: 265px;
 `;
 
 const TransactionSection = () => {

@@ -8,6 +8,8 @@ import logo1 from "./../../assets/cards/visa_white.png";
 const CardsList = styled.FlatList`
   width: 100%;
   padding-left: 25px;
+  flex: 1;
+  paddingbottom: 15px;
 `;
 
 const CardSection = (props: { data?: object[] }) => {
@@ -20,6 +22,7 @@ const CardSection = (props: { data?: object[] }) => {
       ]}
       contentContainerStyle={{
         paddingRight: 25,
+        alignItems: "center",
       }}
       showsHorizontalScrollIndicator={false}
       horizontal={true}

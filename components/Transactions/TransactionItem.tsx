@@ -18,12 +18,15 @@ const TransactionRow = styled.View`
 
 const LeftView = styled.View`
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100%;
   align-items: center;
+  flex: 2;
 `;
 
-const RightView = styled.View``;
+const RightView = styled.View`
+  flex: 1;
+`;
 
 interface TransactionItemProps {
   title: string;

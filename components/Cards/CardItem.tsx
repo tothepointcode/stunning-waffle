@@ -6,40 +6,42 @@ import styled from "styled-components/native";
 import { colors } from "../colors";
 import RegularText from "../Texts/RegularText";
 import SmallText from "../Texts/SmallText";
+import { ScreenWidth } from "../shared";
 
 const CardBackground = styled.ImageBackground`
-  height: 250px;
-  width: 350px;
+  height: 90%;
+  width: ${ScreenWidth * 0.72}px;
   resize-mode: cover;
   background-color: ${colors.accent};
   border-radius: 25px;
-  overflow: hidden;
-  align-self: center;
   margin-right: 25px;
+  overflow: hidden;
 `;
 
 const CardTouchable = styled.TouchableHighlight`
-  height: 250px;
+  height: 100%;
   border-radius: 25px;
 `;
 
 const TouchableView = styled.View`
-  display: flex;
-  flex-grow: 1;
   justify-content: space-between;
+  align-items: center;
   padding: 30px;
+  flex: 1;
 `;
 
 const CardRow = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 `;
 
 const Logo = styled.Image`
-  width: 80px;
-  height: 35px;
+  width: 100%;
+  height: 80%;
   resize-mode: contain;
+  flex: 1;
 `;
 
 interface CardItemProps {
@@ -62,7 +64,7 @@ const CardItem = (props: CardItemProps) => {
             <RegularText>****** {props.accountNo.slice(6, 10)}</RegularText>
           </CardRow>
           <CardRow>
-            <View>
+            <View style={{ flex: 3 }}>
               <SmallText textStyles={{ marginBottom: 5, color: colors.white }}>
                 Total balance
               </SmallText>
