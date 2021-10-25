@@ -1,5 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
+import { Text } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 // screens
 import GetStarted from "./../screens/GetStarted";
@@ -71,7 +73,24 @@ export default function App() {
           component={GetStarted}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="Balance" component={Balance} />
+        <Stack.Screen
+          name="Balance"
+          component={Balance}
+          options={{
+            headerTitle: "",
+            headerBackImage: (props) => (
+              <Ionicons
+                {...props}
+                name="chevron-back"
+                size={30}
+                color={colors.secondary}
+              />
+            ),
+            headerLeftContainerStyle: {
+              paddingLeft: 0,
+            },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
