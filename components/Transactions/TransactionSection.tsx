@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
+import { Ionicons } from "@expo/vector-icons";
 
 //colors
 import { colors } from "../colors";
@@ -29,11 +30,12 @@ const TransactionSection = () => {
   return (
     <TransactionSectionBackground>
       <TransactionRow style={{ marginBottom: 25 }}>
-        <RegularText textStyles={{ fontSize: 25, color: colors.secondary }}>
+        <RegularText textStyles={{ fontSize: 20, color: colors.secondary }}>
           Transaction
         </RegularText>
-        <SmallText textStyles={{ fontWeight: "bold", color: colors.secondary }}>
-          Recent
+        <SmallText textStyles={{ color: colors.secondary }}>
+          Recent{" "}
+          <Ionicons name="caret-down" size={14} color={colors.graydark} />
         </SmallText>
       </TransactionRow>
 

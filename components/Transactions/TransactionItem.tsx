@@ -50,9 +50,9 @@ const TransactionItem = (props: TransactionItemProps) => {
         <View style={{ marginLeft: 10 }}>
           <RegularText
             textStyles={{
-              fontSize: 25,
               color: colors.secondary,
               textAlign: "left",
+              marginBottom: 5,
             }}
           >
             {props.title}
@@ -71,9 +71,9 @@ const TransactionItem = (props: TransactionItemProps) => {
       <RightView>
         <RegularText
           textStyles={{
-            fontSize: 25,
             color: colors.secondary,
             textAlign: "right",
+            marginBottom: 5,
           }}
         >
           {props.amount}

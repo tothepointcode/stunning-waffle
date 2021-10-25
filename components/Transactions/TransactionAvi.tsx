@@ -9,8 +9,8 @@ import { colors } from "../colors";
 
 const StyledView = styled.View`
   display: flex;
-  height: 60px;
-  width: 60px;
+  height: 45px;
+  width: 45px;
   border-radius: 10px;
   background-color: ${colors.tertiary};
   justify-content: center;
@@ -20,7 +20,7 @@ const StyledView = styled.View`
 const TransactionAvi = (props: { icon: any; background: any }) => {
   return (
     <StyledView style={{ backgroundColor: props.background }}>
-      <Ionicons name={props.icon} size={35} color={colors.white} />
+      <Ionicons name={props.icon} size={25} color={colors.white} />
     </StyledView>
   );
 };
