@@ -9,16 +9,18 @@ import CardSection from "../components/Cards/CardSection";
 import TransactionSection from "../components/Transactions/TransactionSection";
 import MoneyBottomSheet from "../components/SendMoney/MoneyBottomSheet";
 
+import { StackScreenProps } from "@react-navigation/stack";
+
 const WelcomeContainer = styled(Container)`
   background-color: ${colors.graylight};
   width: 100%;
   flex: 1;
 `;
 
-const Welcome = () => {
+const Welcome = ({ navigation }: StackScreenProps) => {
   return (
     <WelcomeContainer>
-      <CardSection />
+      <CardSection navigation={navigation} />
       <TransactionSection />
       <MoneyBottomSheet />
     </WelcomeContainer>

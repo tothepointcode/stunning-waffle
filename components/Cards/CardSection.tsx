@@ -12,7 +12,10 @@ const CardsList = styled.FlatList`
   padding-bottom: 15px;
 `;
 
-const CardSection = (props: { data?: object[] }) => {
+const CardSection = (props: { data?: object[]; navigation: any }) => {
+  const handlePress = (balance: string) => {
+    props.navigation.navigate("Balance");
+  };
   return (
     <CardsList
       data={[
@@ -32,6 +35,7 @@ const CardSection = (props: { data?: object[] }) => {
           logo={item.logo}
           balance={item.balance}
           accountNo={item.account}
+          handlePress={handlePress}
         />
       )}
     />

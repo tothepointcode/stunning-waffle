@@ -48,6 +48,7 @@ interface CardItemProps {
   accountNo: string;
   balance: number;
   logo: any;
+  handlePress: any;
 }
 
 const CardItem = (props: CardItemProps) => {
@@ -57,7 +58,7 @@ const CardItem = (props: CardItemProps) => {
     >
       <CardTouchable
         underlayColor={colors.secondary}
-        onPress={() => alert("Pressed!")}
+        onPress={() => props.handlePress(props.balance)}
       >
         <TouchableView>
           <CardRow>
