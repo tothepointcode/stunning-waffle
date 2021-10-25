@@ -96,7 +96,7 @@ export default function MoneyBottomSheet() {
           }}
           horizontal={false}
           showsVerticalScrollIndicator={false}
-          keyExtractor={(item: any) => item.id}
+          keyExtractor={(item: any) => item.id.toString()}
           numColumns={3}
           renderItem={({ item }: any) => (
             <SendMoneyItem
