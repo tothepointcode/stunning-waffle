@@ -9,12 +9,12 @@ import Profile from "../Headers/Profile";
 import { ScreenWidth } from "../shared";
 
 const SendMoneyContainer = styled.TouchableHighlight`
-  height: 150px;
-  width: ${ScreenWidth * 0.273}px;
+  height: 130px;
+  width: ${ScreenWidth * 0.27}px;
   padding: 10px;
-  border-radius: 25px;
+  border-radius: 15px;
   justify-content: space-around;
-  margin: 0px 15px 15px 0px;
+  margin: 0px 10px 10px 0px;
 `;
 
 interface SendMoneyProps {
@@ -34,16 +34,13 @@ const TransactionItem = (props: SendMoneyProps) => {
       }}
     >
       <>
-        <Profile
-          img={props.img}
-          imgContainerStyle={{ width: 60, height: 60, marginBottom: 10 }}
-        />
+        <Profile img={props.img} imgContainerStyle={{ marginBottom: 10 }} />
 
         <SmallText
           textStyles={{
             textAlign: "left",
             color: colors.white,
-            fontSize: 15,
+            fontSize: 12,
           }}
         >
           {props.name}
@@ -52,6 +49,7 @@ const TransactionItem = (props: SendMoneyProps) => {
           textStyles={{
             color: colors.white,
             textAlign: "left",
+            fontSize: 13,
           }}
         >
           {props.amount}

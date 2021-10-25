@@ -30,12 +30,12 @@ const TransactionSection = () => {
   return (
     <TransactionSectionBackground>
       <TransactionRow style={{ marginBottom: 25 }}>
-        <RegularText textStyles={{ fontSize: 20, color: colors.secondary }}>
+        <RegularText textStyles={{ fontSize: 19, color: colors.secondary }}>
           Transaction
         </RegularText>
         <SmallText textStyles={{ color: colors.secondary }}>
-          Recent{" "}
-          <Ionicons name="caret-down" size={14} color={colors.graydark} />
+          Recent
+          <Ionicons name="caret-down" size={13} color={colors.graydark} />
         </SmallText>
       </TransactionRow>
 

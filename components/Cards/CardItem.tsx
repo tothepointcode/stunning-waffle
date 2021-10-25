@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image } from "react-native";
+import { View } from "react-native";
 import styled from "styled-components/native";
 
 //colors
@@ -73,7 +73,7 @@ const CardItem = (props: CardItemProps) => {
               >
                 Total balance
               </SmallText>
-              <RegularText textStyles={{ fontSize: 20 }}>
+              <RegularText textStyles={{ fontSize: 19 }}>
                 ${props.balance}
               </RegularText>
             </View>

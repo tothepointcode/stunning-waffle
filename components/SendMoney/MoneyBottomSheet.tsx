@@ -1,6 +1,4 @@
 import * as React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
-import Animated from "react-native-reanimated";
 import BottomSheet from "reanimated-bottom-sheet";
 
 import styled from "styled-components/native";
@@ -30,7 +28,8 @@ const TransactionRow = styled.View`
 
 const TransactionList = styled.FlatList`
   width: 100%;
-  height: 100%;
+  flex: auto;
+  min-height: 80%;
   padding-horizontal: 25px;
 `;
 
@@ -41,7 +40,7 @@ export default function MoneyBottomSheet() {
     return (
       <TransactionSectionBackground>
         <TransactionRow style={{ marginBottom: 25 }}>
-          <RegularText textStyles={{ fontSize: 25, color: colors.secondary }}>
+          <RegularText textStyles={{ fontSize: 19, color: colors.secondary }}>
             Send money to
           </RegularText>
           <TextButton onPress={() => alert("Add")}>
@@ -76,20 +75,6 @@ export default function MoneyBottomSheet() {
               background: colors.accent,
               img: Portrait3,
             },
-            {
-              id: 4,
-              amount: "4250.56",
-              name: "James Corbyn",
-              background: colors.accent,
-              img: Portrait3,
-            },
-            {
-              id: 5,
-              amount: "2250.56",
-              name: "James Corbyn",
-              background: colors.accent,
-              img: Portrait3,
-            },
           ]}
           contentContainerStyle={{
             alignItems: "flex-start",
@@ -117,10 +102,11 @@ export default function MoneyBottomSheet() {
     <>
       <BottomSheet
         ref={sheetRef}
-        snapPoints={[350, 235, 85]}
+        snapPoints={[240, 240, 85]}
         borderRadius={25}
         initialSnap={2}
         renderContent={renderContent}
+        enabledContentTapInteraction={false}
       />
     </>
   );
