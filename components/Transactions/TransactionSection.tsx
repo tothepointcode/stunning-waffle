@@ -77,7 +77,7 @@ const TransactionSection = () => {
           paddingBottom: 25,
         }}
         showsVerticalScrollIndicator={false}
-        keyExtractor={(item: any) => item.id}
+        keyExtractor={(item: any) => item.id.toString()}
         renderItem={({ item }: any) => (
           <TransactionItem
             amount={item.amount}

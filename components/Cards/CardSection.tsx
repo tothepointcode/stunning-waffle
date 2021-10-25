@@ -29,7 +29,7 @@ const CardSection = (props: { data?: object[]; navigation: any }) => {
       }}
       showsHorizontalScrollIndicator={false}
       horizontal={true}
-      keyExtractor={(item: any) => item.account}
+      keyExtractor={(item: any) => item.account.toString()}
       renderItem={({ item }: any) => (
         <CardItem
           logo={item.logo}
