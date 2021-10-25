@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Image, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import styled from "styled-components/native";
 
 // custom components
@@ -23,6 +23,7 @@ type Props = StackScreenProps<RootStackParamList, "Welcome">;
 const Welcome = ({ navigation }: Props) => {
   return (
     <WelcomeContainer>
+      <StatusBar style="dark" />
       <CardSection navigation={navigation} />
       <TransactionSection />
       <MoneyBottomSheet />

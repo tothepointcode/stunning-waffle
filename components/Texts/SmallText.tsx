@@ -9,7 +9,7 @@ const StyledText = styled.Text`
   font-size: 14px;
   color: ${colors.graylight};
   text-align: left;
-  font-family: Lato-Light;
+  font-family: Lato-Regular;
 `;
 
 const SmallText = (props: { textStyles?: any; children: React.ReactNode }) => {

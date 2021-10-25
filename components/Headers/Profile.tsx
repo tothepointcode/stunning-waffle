@@ -4,8 +4,8 @@ import styled from "styled-components/native";
 const StyledView = styled.View`
   display: flex;
   flex-direction: column;
-  height: 55px;
-  width: 55px;
+  height: 45px;
+  width: 45px;
   border-radius: 15px;
 `;
 

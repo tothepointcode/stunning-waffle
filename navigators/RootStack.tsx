@@ -40,17 +40,11 @@ export default function App() {
             height: 120,
           },
           headerTintColor: colors.secondary,
-          headerTitleStyle: {
-            fontWeight: "bold",
-          },
           headerRightContainerStyle: {
             paddingRight: 25,
           },
           headerLeftContainerStyle: {
             paddingLeft: 10,
-          },
-          headerTitleContainerStyle: {
-            marginTop: 15,
           },
           headerRight: () => (
             <Profile

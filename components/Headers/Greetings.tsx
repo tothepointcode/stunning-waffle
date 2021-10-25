@@ -10,7 +10,8 @@ import SmallText from "../Texts/SmallText";
 const StyledView = styled.View`
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
+  flex: 1;
+  justify-content: center;
 `;
 
 interface GreetingsProps {
@@ -26,8 +27,7 @@ const Greetings = (props: GreetingsProps) => {
       <RegularText
         textStyles={{
           color: colors.secondary,
-          fontSize: 30,
-          fontWeight: "bold",
+          fontSize: 22,
           ...props.mainTextStyles,
         }}
       >

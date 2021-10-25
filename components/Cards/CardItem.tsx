@@ -9,8 +9,8 @@ import SmallText from "../Texts/SmallText";
 import { ScreenWidth } from "../shared";
 
 const CardBackground = styled.ImageBackground`
-  height: 90%;
-  width: ${ScreenWidth * 0.72}px;
+  height: 75%;
+  width: ${ScreenWidth * 0.67}px;
   resize-mode: cover;
   background-color: ${colors.accent};
   border-radius: 25px;
@@ -62,14 +62,18 @@ const CardItem = (props: CardItemProps) => {
       >
         <TouchableView>
           <CardRow>
-            <RegularText>****** {props.accountNo.slice(6, 10)}</RegularText>
+            <RegularText textStyles={{ color: colors.white }}>
+              ****** {props.accountNo.slice(6, 10)}
+            </RegularText>
           </CardRow>
           <CardRow>
             <View style={{ flex: 3 }}>
-              <SmallText textStyles={{ marginBottom: 5, color: colors.white }}>
+              <SmallText
+                textStyles={{ marginBottom: 5, color: colors.graylight }}
+              >
                 Total balance
               </SmallText>
-              <RegularText textStyles={{ fontSize: 25 }}>
+              <RegularText textStyles={{ fontSize: 20 }}>
                 ${props.balance}
               </RegularText>
             </View>
