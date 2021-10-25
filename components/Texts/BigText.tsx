@@ -6,11 +6,10 @@ import styled from "styled-components/native";
 import { colors } from "../colors";
 
 const StyledText = styled.Text`
-  font-size: 50px;
-  font-weight: 700;
+  font-size: 40px;
   color: ${colors.white};
-  margin-bottom: 25px;
   text-align: left;
+  font-family: Lato-Bold;
 `;
 
 const BigText = (props: { textStyles?: any; children: React.ReactNode }) => {

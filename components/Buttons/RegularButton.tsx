@@ -1,9 +1,9 @@
 import React from "react";
-import { View, TouchableOpacity, Text } from "react-native";
 import styled from "styled-components/native";
 
 //colors
 import { colors } from "../colors";
+import RegularText from "./../Texts/RegularText";
 
 const ButtonView = styled.TouchableOpacity`
   align-items: center;
@@ -11,13 +11,6 @@ const ButtonView = styled.TouchableOpacity`
   width: 100%;
   padding: 20px;
   border-radius: 20px;
-`;
-
-const ButtonText = styled.Text`
-  color: ${colors.white};
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 0.5px;
 `;
 
 const RegularButton = (props: {
@@ -28,7 +21,9 @@ const RegularButton = (props: {
 }) => {
   return (
     <ButtonView onPress={props.onPress} style={{ ...props.btnStyles }}>
-      <ButtonText style={{ ...props.btnStyles }}>{props.children}</ButtonText>
+      <RegularText textStyles={{ ...props.btnStyles }}>
+        {props.children}
+      </RegularText>
     </ButtonView>
   );
 };

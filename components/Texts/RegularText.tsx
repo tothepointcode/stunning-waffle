@@ -6,8 +6,8 @@ import styled from "styled-components/native";
 import { colors } from "../colors";
 
 const StyledText = styled.Text`
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 16px;
+  font-family: Lato-Bold;
   color: ${colors.white};
   text-align: left;
 `;

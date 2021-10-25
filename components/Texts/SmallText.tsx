@@ -6,9 +6,10 @@ import styled from "styled-components/native";
 import { colors } from "../colors";
 
 const StyledText = styled.Text`
-  font-size: 17px;
-  color: ${colors.gray};
+  font-size: 14px;
+  color: ${colors.graylight};
   text-align: left;
+  font-family: Lato-Light;
 `;
 
 const SmallText = (props: { textStyles?: any; children: React.ReactNode }) => {

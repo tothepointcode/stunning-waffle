@@ -49,7 +49,7 @@ const GetStarted = ({ navigation }: Props) => {
           <TopImage source={require("./../assets/bgs/background_v1.png")} />
         </TopSection>
         <BottomSection>
-          <BigText textStyles={{ width: "70%" }}>
+          <BigText textStyles={{ width: "70%", marginBottom: 25 }}>
             Best way to track your money
           </BigText>
           <SmallText textStyles={{ width: "70%", marginBottom: 25 }}>
