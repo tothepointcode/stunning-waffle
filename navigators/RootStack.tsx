@@ -19,7 +19,13 @@ import Profile from "../components/Headers/Profile";
 import Greetings from "../components/Headers/Greetings";
 import Avi from "./../assets/avi/avatar.png";
 
-const Stack = createStackNavigator();
+export type RootStackParamList = {
+  GetStarted: undefined;
+  Welcome: undefined;
+  Balance: undefined;
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (

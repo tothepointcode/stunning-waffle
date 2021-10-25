@@ -9,6 +9,7 @@ import CardSection from "../components/Cards/CardSection";
 import TransactionSection from "../components/Transactions/TransactionSection";
 import MoneyBottomSheet from "../components/SendMoney/MoneyBottomSheet";
 
+import { RootStackParamList } from "../navigators/RootStack";
 import { StackScreenProps } from "@react-navigation/stack";
 
 const WelcomeContainer = styled(Container)`
@@ -17,7 +18,9 @@ const WelcomeContainer = styled(Container)`
   flex: 1;
 `;
 
-const Welcome = ({ navigation }: StackScreenProps) => {
+type Props = StackScreenProps<RootStackParamList, "Welcome">;
+
+const Welcome = ({ navigation }: Props) => {
   return (
     <WelcomeContainer>
       <CardSection navigation={navigation} />
