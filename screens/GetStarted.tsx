@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Image, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import styled from "styled-components/native";
 
 // custom components
@@ -8,6 +8,9 @@ import { Container } from "../components/shared";
 import RegularButton from "../components/Buttons/RegularButton";
 import BigText from "../components/Texts/BigText";
 import SmallText from "../components/Texts/SmallText";
+
+import { RootStackParamList } from "../navigators/RootStack";
+import { StackScreenProps } from "@react-navigation/stack";
 
 const GetStartedContainer = styled(Container)`
   background-color: ${colors.secondary};
@@ -34,22 +37,30 @@ const BottomSection = styled.View`
   justify-content: flex-end;
 `;
 
-const GetStarted = () => {
+// Type checking
+type Props = StackScreenProps<RootStackParamList, "GetStarted">;
+
+const GetStarted = ({ navigation }: Props) => {
   return (
-    <GetStartedContainer>
-      <TopSection>
-        <TopImage source={require("./../assets/bgs/background_v1.png")} />
-      </TopSection>
-      <BottomSection>
-        <BigText textStyles={{ width: "70%" }}>
-          Best way to track your money
-        </BigText>
-        <SmallText textStyles={{ width: "70%", marginBottom: 25 }}>
-          Best payment method, connects your money to your friends, family.
-        </SmallText>
-        <RegularButton>Get Started</RegularButton>
-      </BottomSection>
-    </GetStartedContainer>
+    <>
+      <StatusBar style="light" />
+      <GetStartedContainer>
+        <TopSection>
+          <TopImage source={require("./../assets/bgs/background_v1.png")} />
+        </TopSection>
+        <BottomSection>
+          <BigText textStyles={{ width: "70%" }}>
+            Best way to track your money
+          </BigText>
+          <SmallText textStyles={{ width: "70%", marginBottom: 25 }}>
+            Best payment method, connects your money to your friends, family.
+          </SmallText>
+          <RegularButton onPress={() => navigation.navigate("Welcome")}>
+            Get Started
+          </RegularButton>
+        </BottomSection>
+      </GetStartedContainer>
+    </>
   );
 };
 

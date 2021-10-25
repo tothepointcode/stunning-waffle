@@ -24,9 +24,10 @@ const RegularButton = (props: {
   btnStyles?: any;
   textStyles?: any;
   children: React.ReactNode;
+  onPress: any;
 }) => {
   return (
-    <ButtonView style={{ ...props.btnStyles }}>
+    <ButtonView onPress={props.onPress} style={{ ...props.btnStyles }}>
       <ButtonText style={{ ...props.btnStyles }}>{props.children}</ButtonText>
     </ButtonView>
   );

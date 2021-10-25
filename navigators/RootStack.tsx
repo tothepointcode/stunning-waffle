@@ -1,6 +1,5 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 // screens
@@ -62,6 +61,11 @@ export default function App() {
         }}
       >
         <Stack.Screen
+          name="GetStarted"
+          component={GetStarted}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="Welcome"
           component={Welcome}
           options={{
@@ -72,12 +76,8 @@ export default function App() {
                 {...props}
               />
             ),
+            headerLeft: () => <></>,
           }}
-        />
-        <Stack.Screen
-          name="GetStarted"
-          component={GetStarted}
-          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Balance"
