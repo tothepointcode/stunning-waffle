@@ -5,7 +5,7 @@ import { Circle } from "react-native-svg";
 
 // custom components
 import { colors } from "../colors";
-import SmallText from "../Texts/SmallText";
+import RegularText from "../Texts/RegularText";
 
 const BalanceView = styled.View`
   align-items: center;
@@ -78,11 +78,11 @@ const BalanceChart = (props: { data: LineChartData }) => {
             return (
               <View key={Math.random()}>
                 <SmallBox style={{ left: left, top: y - 55 }}>
-                  <SmallText
-                    textStyles={{ color: colors.white, fontWeight: "bold" }}
+                  <RegularText
+                    textStyles={{ color: colors.white, fontSize: 13 }}
                   >
                     ${indexData}
-                  </SmallText>
+                  </RegularText>
                 </SmallBox>
                 <Circle
                   cx={x}

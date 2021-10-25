@@ -7,13 +7,15 @@ import SmallText from "../Texts/SmallText";
 
 const FilterView = styled.View`
   align-items: center;
-  margin-top: 20px;
   flex-direction: row;
   justify-content: space-around;
   width: 75%;
+  margin-bottom: 25px;
 `;
 
-const TextButton = styled.TouchableOpacity``;
+const TextButton = styled.TouchableOpacity`
+  padding: 10px;
+`;
 
 const Filter = (props: {
   setActiveFilter: React.Dispatch<React.SetStateAction<number>>;

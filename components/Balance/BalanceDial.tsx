@@ -14,7 +14,7 @@ const BalanceView = styled.View`
   border-radius: 500px;
   border: 3px solid ${colors.accentLight};
   justify-content: center;
-  margin-top: 10px;
+  marginBottom: 25px;
 `;
 
 const BalanceDial = (props: { balance: number | string }) => {
@@ -37,10 +37,10 @@ const BalanceDial = (props: { balance: number | string }) => {
       >
         {(fill) => (
           <>
-            <SmallText textStyles={{ color: colors.secondary }}>
+            <SmallText textStyles={{ color: colors.secondary, marginBottom: 5 }}>
               Total Balance
             </SmallText>
-            <RegularText textStyles={{ color: colors.secondary, fontSize: 35 }}>
+            <RegularText textStyles={{ color: colors.secondary, fontSize: 28 }}>
               ${props.balance}
             </RegularText>
           </>

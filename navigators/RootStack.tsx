@@ -82,7 +82,7 @@ export default function App() {
               <Ionicons
                 {...props}
                 name="chevron-back"
-                size={30}
+                size={25}
                 color={colors.secondary}
               />
             ),
