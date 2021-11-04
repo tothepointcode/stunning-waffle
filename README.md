@@ -14,6 +14,6 @@ The implemented screens.
 
 ## Tools Used
 
-- React Native
-- Expo
-- Typescript
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.io/)
+- [Typescript](https://www.typescriptlang.org/)
