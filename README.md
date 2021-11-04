@@ -17,3 +17,8 @@ The implemented screens.
 - [React Native](https://reactnative.dev/)
 - [Expo](https://expo.io/)
 - [Typescript](https://www.typescriptlang.org/)
+
+## Acknowledgements
+
+- [Vector4Free](https://www.vector4free.com) - Source of background vector arts.
+- [Unsplash](https://unsplash.com) - Source of Avatar images.
